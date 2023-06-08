@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smart_transfer/AppConstants/constants.dart';
+import 'package:smart_transfer/Utils/app_utils.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -8,6 +10,8 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  var utils = AppUtils();
+  bool value = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +46,141 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ],
                   borderRadius: BorderRadius.circular(20.0),
                 ),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Text(
+                      "Welcome to \nNexiPay!",
+                      style: utils.largestHeadingTextStyle(),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        children: [
+                          utils.labelTextField(
+                            obscureText: false,
+                            hintText: "dummy@gmail.com",
+                            labelText: "EMAIL",
+                            onChange: (val) {
+                              setState(() {});
+                            },
+                            suffixIcon: const Icon(
+                              Icons.check,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          utils.labelTextField(
+                            obscureText: true,
+                            hintText: "******",
+                            labelText: "PASSWORD",
+                            suffixIcon: const Icon(
+                              Icons.remove_red_eye,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      value = !value;
+                                      setState(() {});
+                                    },
+                                    child: Container(
+                                      width: 20,
+                                      height: 20,
+                                      decoration: BoxDecoration(
+                                        color: value
+                                            ? darkBlueColor
+                                            : Colors.blueGrey.withOpacity(0.2),
+                                        borderRadius:
+                                            BorderRadius.circular(3.0),
+                                      ),
+                                      child: value
+                                          ? const Icon(
+                                              Icons.check,
+                                              color: Colors.white,
+                                              size: 15,
+                                            )
+                                          : Container(),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    "Remeber me",
+                                    style: utils.mediumTitleTextStyle(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              GestureDetector(
+                                onTap: () {},
+                                child: Text(
+                                  "Lost your password?",
+                                  style: utils.mediumTitleSemiBoldTextStyle(
+                                    color: darkBlueColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          utils.bigButton(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            onTap: () {},
+                            text: "Sign In",
+                            borderRadius: 15.0,
+                            textColor: Colors.white,
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "No account? ",
+                                style: utils.mediumTitleTextStyle(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {},
+                                child: Text(
+                                  "Register now",
+                                  style: utils.mediumTitleTextStyle(
+                                    color: darkBlueColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -59,6 +198,44 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     )
                   ],
                   borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Log in with social networks",
+                      style: utils.largeTextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        for (int i = 0; i < 3; i++)
+                          Container(
+                            width: 100,
+                            height: 35,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.blueGrey.withOpacity(0.1),
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                i == 0
+                                    ? "assets/facebookIcon.png"
+                                    : i == 1
+                                        ? "assets/twitterIcon.png"
+                                        : "assets/googlePlusIcon.png",
+                                scale: 30,
+                              ),
+                            ),
+                          ),
+                      ],
+                    )
+                  ],
                 ),
               )
             ],

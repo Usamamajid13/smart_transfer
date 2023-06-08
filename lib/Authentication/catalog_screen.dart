@@ -56,7 +56,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                   ),
                   Text(
                     "Labore sunt culpa excepteur culpa ipsum.\n Labore occaecat ex nisi mollit.",
-                    style: utils.smallTitleTextStyle(
+                    style: utils.mediumTitleTextStyle(
                       color: Colors.grey,
                     ),
                     textAlign: TextAlign.center,

@@ -11,6 +11,14 @@ class AppUtils {
     );
   }
 
+  mediumTitleSemiBoldTextStyle({color}) {
+    return TextStyle(
+      fontSize: 14,
+      color: color,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
   largeHeadingTextStyle({color}) {
     return TextStyle(
       fontSize: 22,
@@ -19,16 +27,31 @@ class AppUtils {
     );
   }
 
+  largestHeadingTextStyle({color}) {
+    return TextStyle(
+      fontSize: 36,
+      fontWeight: FontWeight.w600,
+      color: color,
+    );
+  }
+
+  largeTextStyle({color}) {
+    return TextStyle(
+      fontSize: 18,
+      color: color,
+    );
+  }
+
   smallTitleTextStyle({color}) {
     return TextStyle(
       color: color,
-      fontSize: 14,
+      fontSize: 12,
     );
   }
 
   mediumTitleTextStyle({color}) {
     return TextStyle(
-      fontSize: 15,
+      fontSize: 14,
       color: color,
     );
   }
@@ -137,6 +160,67 @@ class AppUtils {
                     borderSide: const BorderSide(color: blueColor, width: 1.5),
                     borderRadius: BorderRadius.circular(30.0),
                   )),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  labelTextField(
+      {controller,
+      hintText,
+      focusNode,
+      keyboardType,
+      obscureText,
+      onTap,
+      suffixIcon,
+      labelText,
+      enabled,
+      validator,
+      prefixIcon,
+      onChange}) {
+    return Container(
+      height: 70,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            labelText,
+            style: smallTitleTextStyle(
+              color: Colors.black,
+            ),
+          ),
+          TextFormField(
+            onTap: onTap,
+            enabled: enabled,
+            obscuringCharacter: '*',
+            onChanged: onChange,
+            keyboardType: keyboardType,
+            style: mediumTitleTextStyle(
+              color: Colors.black,
+            ),
+            focusNode: focusNode,
+            validator: validator,
+            controller: controller,
+            obscureText: obscureText,
+            decoration: InputDecoration(
+              suffixIcon: suffixIcon,
+              prefixIcon: prefixIcon,
+
+               focusedBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              enabledBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              disabledBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+              ),
+              hintText: hintText,
+              hintStyle: mediumTitleTextStyle(
+                color: Colors.grey,
+              ),
             ),
           ),
         ],
