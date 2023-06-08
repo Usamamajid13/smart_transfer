@@ -8,5 +8,6 @@ const darkBlueColor = Color(0xff4355F1);
 ///routes
 const splashScreenRoute = "/";
 const catalogScreenRoute = "/catalogScreenRoute";
+const loginScreenRoute = "/loginScreenRoute";
 const signUpScreenRoute = "/signUpScreenRoute";
 const homeScreenRoute = "/homeScreenRoute";

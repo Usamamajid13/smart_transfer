@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'AppConstants/constants.dart';
 import 'Authentication/catalog_screen.dart';
-import 'Authentication/register_screen.dart';
+import 'Authentication/login_screen.dart';
+import 'Authentication/sign_up_screen.dart';
 import 'Authentication/splash_screen.dart';
 import 'MainScreens/home_screen.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         splashScreenRoute: (context) => const SplashScreen(),
         catalogScreenRoute: (context) => const CatalogScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
+        loginScreenRoute: (context) => const LoginScreen(),
         signUpScreenRoute: (context) => const SignUpScreen(),
       },
     );

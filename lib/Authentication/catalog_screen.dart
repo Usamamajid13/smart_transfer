@@ -82,7 +82,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
             utils.bigButton(
               width: MediaQuery.of(context).size.width * 0.9,
               onTap: () {
-                Navigator.pushNamed(context, signUpScreenRoute);
+                Navigator.pushNamed(context, loginScreenRoute);
               },
               text: "Get Started",
               borderRadius: 15.0,

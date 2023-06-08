@@ -191,35 +191,37 @@ class AppUtils {
               color: Colors.black,
             ),
           ),
-          TextFormField(
-            onTap: onTap,
-            enabled: enabled,
-            obscuringCharacter: '*',
-            onChanged: onChange,
-            keyboardType: keyboardType,
-            style: mediumTitleTextStyle(
-              color: Colors.black,
-            ),
-            focusNode: focusNode,
-            validator: validator,
-            controller: controller,
-            obscureText: obscureText,
-            decoration: InputDecoration(
-              suffixIcon: suffixIcon,
-              prefixIcon: prefixIcon,
-
-               focusedBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
+          Container(
+            height: 40,
+            child: TextFormField(
+              onTap: onTap,
+              enabled: enabled,
+              obscuringCharacter: '*',
+              onChanged: onChange,
+              keyboardType: keyboardType,
+              style: mediumTitleTextStyle(
+                color: Colors.black,
               ),
-              enabledBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
-              ),
-              disabledBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
-              ),
-              hintText: hintText,
-              hintStyle: mediumTitleTextStyle(
-                color: Colors.grey,
+              focusNode: focusNode,
+              validator: validator,
+              controller: controller,
+              obscureText: obscureText,
+              decoration: InputDecoration(
+                suffixIcon: suffixIcon,
+                prefixIcon: prefixIcon,
+                focusedBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                enabledBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                disabledBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                hintText: hintText,
+                hintStyle: mediumTitleTextStyle(
+                  color: Colors.grey,
+                ),
               ),
             ),
           ),

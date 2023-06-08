@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:smart_transfer/AppConstants/constants.dart';
 import 'package:smart_transfer/Utils/app_utils.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   var utils = AppUtils();
   bool value = false;
   @override
@@ -77,7 +77,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ),
                           const SizedBox(
-                            height: 30,
+                            height: 20,
                           ),
                           utils.labelTextField(
                             obscureText: true,
@@ -90,7 +90,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -144,7 +144,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ],
                           ),
                           const SizedBox(
-                            height: 30,
+                            height: 40,
                           ),
                           utils.bigButton(
                             width: MediaQuery.of(context).size.width * 0.8,
@@ -166,7 +166,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                               ),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, signUpScreenRoute);
+                                },
                                 child: Text(
                                   "Register now",
                                   style: utils.mediumTitleTextStyle(
