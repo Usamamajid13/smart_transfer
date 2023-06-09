@@ -8,6 +8,7 @@ import 'Authentication/forgot_password_email_screen.dart';
 import 'Authentication/login_screen.dart';
 import 'Authentication/sign_up_screen.dart';
 import 'Authentication/splash_screen.dart';
+import 'Authentication/verify_phone_screen.dart';
 import 'MainScreens/home_screen.dart';
 
 void main() {
@@ -29,6 +30,8 @@ class MyApp extends StatelessWidget {
         forgotPasswordEmailScreenRoute: (context) =>
             const ForgotPasswordEmailScreen(),
         signUpScreenRoute: (context) => const SignUpScreen(),
+        verifyPhoneNumberScreenRoute: (context) =>
+            const VerifyPhoneNumberScreen(),
       },
     );
   }

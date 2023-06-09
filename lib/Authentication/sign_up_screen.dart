@@ -119,7 +119,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           utils.bigButton(
                             width: MediaQuery.of(context).size.width * 0.8,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, verifyPhoneNumberScreenRoute);
+                            },
                             text: "Sign Up",
                             fontSize: 16,
                             borderRadius: 15.0,

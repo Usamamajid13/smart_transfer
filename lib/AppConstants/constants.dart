@@ -10,5 +10,6 @@ const splashScreenRoute = "/";
 const catalogScreenRoute = "/catalogScreenRoute";
 const loginScreenRoute = "/loginScreenRoute";
 const forgotPasswordEmailScreenRoute = "/forgotPasswordEmailScreenRoute";
+const verifyPhoneNumberScreenRoute = "/verifyPhoneNumberScreenRoute";
 const signUpScreenRoute = "/signUpScreenRoute";
 const homeScreenRoute = "/homeScreenRoute";
