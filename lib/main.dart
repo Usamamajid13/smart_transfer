@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'AppConstants/constants.dart';
+import 'Authentication/account_created_screen.dart';
 import 'Authentication/catalog_screen.dart';
 import 'Authentication/forgot_password_email_screen.dart';
 import 'Authentication/login_screen.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         forgotPasswordEmailScreenRoute: (context) =>
             const ForgotPasswordEmailScreen(),
         signUpScreenRoute: (context) => const SignUpScreen(),
+        accountCreatedScreenRoute: (context) => const AccountCreatedScreen(),
         verifyPhoneNumberScreenRoute: (context) =>
             const VerifyPhoneNumberScreen(),
       },

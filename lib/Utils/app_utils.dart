@@ -51,6 +51,14 @@ class AppUtils {
     );
   }
 
+  xlargeHeadingTextStyle({color}) {
+    return TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.w600,
+      color: color,
+    );
+  }
+
   largeTextStyle({color}) {
     return TextStyle(
       fontSize: 18,

@@ -2,6 +2,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../AppConstants/constants.dart';
 import '../Utils/app_utils.dart';
 
 class VerifyPhoneNumberScreen extends StatefulWidget {
@@ -126,7 +127,10 @@ class _VerifyPhoneNumberScreenState extends State<VerifyPhoneNumberScreen> {
                           ),
                           utils.bigButton(
                             width: MediaQuery.of(context).size.width * 0.8,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, accountCreatedScreenRoute);
+                            },
                             fontSize: 16,
                             text: "Confirm",
                             borderRadius: 15.0,
