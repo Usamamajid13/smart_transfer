@@ -40,7 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 550,
+                height: 500,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -55,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 50,
+                      height: 30,
                     ),
                     Text(
                       "Sign up!",
@@ -165,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 140,
+                height: 120,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [

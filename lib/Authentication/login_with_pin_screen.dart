@@ -90,10 +90,10 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                       ],
                     ),
                     const SizedBox(
-                      height: 40,
+                      height: 30,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
+                      width: MediaQuery.of(context).size.width * 0.7,
                       child: Center(
                         child: Wrap(
                           spacing: 15.0,
@@ -154,7 +154,7 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                       ),
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 35,
                     ),
                     Text(
                       "Lost your password?",

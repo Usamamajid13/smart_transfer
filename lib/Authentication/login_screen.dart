@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 550,
+                height: 480,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -54,15 +54,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 50,
+                      height: 40,
                     ),
                     Text(
-                      "Welcome to \nNexiPay!",
+                      "Welcome to \nSmart Transfer!",
                       style: utils.largestHeadingTextStyle(),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),

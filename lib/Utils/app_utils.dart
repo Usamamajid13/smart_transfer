@@ -264,8 +264,8 @@ class AppUtils {
 
   numPadButton({required String text, onTap}) {
     return Container(
-      width: 80,
-      height: 80,
+      width: 60,
+      height: 60,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey,
@@ -283,8 +283,8 @@ class AppUtils {
 
   numPadImageButton({required String image, onTap, scale}) {
     return Container(
-      width: 80,
-      height: 80,
+      width: 60,
+      height: 60,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey,
