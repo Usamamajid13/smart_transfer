@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'AppConstants/constants.dart';
 import 'Authentication/catalog_screen.dart';
+import 'Authentication/forgot_password_email_screen.dart';
 import 'Authentication/login_screen.dart';
 import 'Authentication/sign_up_screen.dart';
 import 'Authentication/splash_screen.dart';
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
         catalogScreenRoute: (context) => const CatalogScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
         loginScreenRoute: (context) => const LoginScreen(),
+        forgotPasswordEmailScreenRoute: (context) =>
+            const ForgotPasswordEmailScreen(),
         signUpScreenRoute: (context) => const SignUpScreen(),
       },
     );

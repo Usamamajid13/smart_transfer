@@ -133,7 +133,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ],
                               ),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, forgotPasswordEmailScreenRoute);
+                                },
                                 child: Text(
                                   "Lost your password?",
                                   style: utils.mediumTitleSemiBoldTextStyle(
@@ -151,6 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             onTap: () {},
                             text: "Sign In",
                             borderRadius: 15.0,
+                            fontSize: 16,
                             textColor: Colors.white,
                           ),
                           const SizedBox(

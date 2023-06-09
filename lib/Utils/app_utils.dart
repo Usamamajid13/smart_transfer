@@ -19,6 +19,22 @@ class AppUtils {
     );
   }
 
+  xmediumTitleSemiBoldTextStyle({color}) {
+    return TextStyle(
+      fontSize: 16,
+      color: color,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  xmediumTitleTextStyle({color}) {
+    return TextStyle(
+      fontSize: 15,
+      color: color,
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   largeHeadingTextStyle({color}) {
     return TextStyle(
       fontSize: 22,
@@ -75,7 +91,7 @@ class AppUtils {
             borderRadius: BorderRadius.circular(borderRadius ?? 0),
             boxShadow: [
               BoxShadow(
-                color: darkBlueColor.withOpacity(0.5),
+                color: darkBlueColor.withOpacity(0.4),
                 blurRadius: 3,
                 offset: const Offset(0, 2),
               )
