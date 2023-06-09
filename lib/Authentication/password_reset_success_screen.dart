@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../Utils/app_utils.dart';
 
-class AccountCreatedScreen extends StatefulWidget {
-  const AccountCreatedScreen({Key? key}) : super(key: key);
+class PasswordResetSuccessScreen extends StatefulWidget {
+  const PasswordResetSuccessScreen({Key? key}) : super(key: key);
 
   @override
-  State<AccountCreatedScreen> createState() => _AccountCreatedScreenState();
+  State<PasswordResetSuccessScreen> createState() =>
+      _PasswordResetSuccessScreenState();
 }
 
-class _AccountCreatedScreenState extends State<AccountCreatedScreen> {
+class _PasswordResetSuccessScreenState
+    extends State<PasswordResetSuccessScreen> {
   var utils = AppUtils();
   @override
   Widget build(BuildContext context) {
@@ -45,21 +47,21 @@ class _AccountCreatedScreenState extends State<AccountCreatedScreen> {
                     ),
                     const Spacer(),
                     Image.asset(
-                      "assets/briefcase.png",
+                      "assets/passwordResetSuccessIcon.png",
                       scale: 5,
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     Text(
-                      "Account Created!",
+                      "Your Password \nHas Been Reset!",
                       style: utils.xlargeHeadingTextStyle(),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     Text(
-                      "Your account had been created \nsuccessfully.",
+                      "Your password had been \nchanged successfully. You can \ncontinue using the app",
                       style: utils.mediumTitleSemiBoldTextStyle(
                         color: Colors.grey,
                       ),
@@ -70,7 +72,7 @@ class _AccountCreatedScreenState extends State<AccountCreatedScreen> {
                       width: MediaQuery.of(context).size.width * 0.8,
                       onTap: () {},
                       fontSize: 16,
-                      text: "Continue",
+                      text: "Done",
                       borderRadius: 15.0,
                       textColor: Colors.white,
                     ),

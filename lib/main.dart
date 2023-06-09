@@ -7,6 +7,9 @@ import 'Authentication/account_created_screen.dart';
 import 'Authentication/catalog_screen.dart';
 import 'Authentication/forgot_password_email_screen.dart';
 import 'Authentication/login_screen.dart';
+import 'Authentication/login_with_pin_screen.dart';
+import 'Authentication/new_password_screen.dart';
+import 'Authentication/password_reset_success_screen.dart';
 import 'Authentication/sign_up_screen.dart';
 import 'Authentication/splash_screen.dart';
 import 'Authentication/verify_phone_screen.dart';
@@ -28,10 +31,14 @@ class MyApp extends StatelessWidget {
         catalogScreenRoute: (context) => const CatalogScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
         loginScreenRoute: (context) => const LoginScreen(),
+        passwordResetSuccessScreenRoute: (context) =>
+            const PasswordResetSuccessScreen(),
         forgotPasswordEmailScreenRoute: (context) =>
             const ForgotPasswordEmailScreen(),
         signUpScreenRoute: (context) => const SignUpScreen(),
         accountCreatedScreenRoute: (context) => const AccountCreatedScreen(),
+        loginWithPinScreenRoute: (context) => const LoginWithPinScreen(),
+        newPasswordScreenRoute: (context) => const NewPasswordScreen(),
         verifyPhoneNumberScreenRoute: (context) =>
             const VerifyPhoneNumberScreen(),
       },

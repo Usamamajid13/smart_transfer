@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import '../AppConstants/constants.dart';
 import '../Utils/app_utils.dart';
 
-class ForgotPasswordEmailScreen extends StatefulWidget {
-  const ForgotPasswordEmailScreen({Key? key}) : super(key: key);
+class NewPasswordScreen extends StatefulWidget {
+  const NewPasswordScreen({Key? key}) : super(key: key);
 
   @override
-  State<ForgotPasswordEmailScreen> createState() =>
-      _ForgotPasswordEmailScreenState();
+  State<NewPasswordScreen> createState() => _NewPasswordScreenState();
 }
 
-class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
+class _NewPasswordScreenState extends State<NewPasswordScreen> {
   var utils = AppUtils();
-  bool value = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +39,7 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                     ),
                   ),
                   Text(
-                    "Forgot password",
+                    "New password",
                     style: utils.xmediumTitleSemiBoldTextStyle(),
                   ),
                   SizedBox(
@@ -53,7 +52,7 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 250,
+                height: 300,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -74,24 +73,37 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Column(
                         children: [
-                          Text(
-                            "Please enter your email address. You will receive a link to create a new password via email.",
-                            style: utils.xmediumTitleTextStyle(
-                              color: Colors.grey,
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Enter new password and confirm",
+                              style: utils.xmediumTitleTextStyle(
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
                           utils.labelTextField(
-                            obscureText: false,
-                            hintText: "dummy@gmail.com",
-                            labelText: "EMAIL",
-                            onChange: (val) {
-                              setState(() {});
-                            },
+                            obscureText: true,
+                            hintText: "Confirm your password",
+                            labelText: "NEW PASSWORD",
                             suffixIcon: const Icon(
-                              Icons.check,
+                              Icons.remove_red_eye,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          utils.labelTextField(
+                            obscureText: true,
+                            hintText: "Confirm your password",
+                            labelText: "CONFIRM PASSWORD",
+                            suffixIcon: const Icon(
+                              Icons.remove_red_eye,
                               color: Colors.grey,
                               size: 20,
                             ),
@@ -103,10 +115,10 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                             width: MediaQuery.of(context).size.width * 0.8,
                             onTap: () {
                               Navigator.pushNamed(
-                                  context, newPasswordScreenRoute);
+                                  context, passwordResetSuccessScreenRoute);
                             },
                             fontSize: 16,
-                            text: "Send",
+                            text: "Change Password",
                             borderRadius: 15.0,
                             textColor: Colors.white,
                           ),

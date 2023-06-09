@@ -66,6 +66,14 @@ class AppUtils {
     );
   }
 
+  largeSemiBoldTextStyle({color}) {
+    return TextStyle(
+      fontSize: 18,
+      color: color,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
   smallTitleTextStyle({color}) {
     return TextStyle(
       color: color,
@@ -250,6 +258,44 @@ class AppUtils {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  numPadButton({required String text, onTap}) {
+    return Container(
+      width: 80,
+      height: 80,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.grey,
+        ),
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: largeSemiBoldTextStyle(),
+        ),
+      ),
+    );
+  }
+
+  numPadImageButton({required String image, onTap, scale}) {
+    return Container(
+      width: 80,
+      height: 80,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.grey,
+        ),
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      child: Center(
+        child: Image.asset(
+          image,
+          scale: scale,
+        ),
       ),
     );
   }

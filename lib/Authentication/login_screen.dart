@@ -156,7 +156,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           utils.bigButton(
                             width: MediaQuery.of(context).size.width * 0.8,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, loginWithPinScreenRoute);
+                            },
                             text: "Sign In",
                             borderRadius: 15.0,
                             fontSize: 16,
