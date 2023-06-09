@@ -24,10 +24,15 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 50,
               ),
-              Icon(
-                Icons.arrow_back_ios,
-                color: Colors.black.withOpacity(0.8),
-                size: 20,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black.withOpacity(0.8),
+                  size: 20,
+                ),
               ),
               const SizedBox(
                 height: 30,
