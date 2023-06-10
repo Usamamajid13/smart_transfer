@@ -41,19 +41,19 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          const Center(
-            child: Icon(
-              Icons.ac_unit,
-              color: Colors.white,
-              size: 150,
-            ),
-          ),
-          // Center(
-          //   child: Image.asset(
-          //     "assets/logo.png",
-          //     scale: 3,
+          // const Center(
+          //   child: Icon(
+          //     Icons.ac_unit,
+          //     color: Colors.white,
+          //     size: 150,
           //   ),
           // ),
+          Center(
+            child: Image.asset(
+              "assets/logo.png",
+              scale: 1,
+            ),
+          ),
         ],
       ),
     );
