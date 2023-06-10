@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_transfer/AppConstants/constants.dart';
 import 'package:smart_transfer/Utils/app_utils.dart';
@@ -12,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   var utils = AppUtils();
   bool value = false;
+  bool obscure1 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 40,
                     ),
                     Text(
-                      "Welcome to \nSmart Transfer!",
+                      "Welcome",
                       style: utils.largestHeadingTextStyle(),
                       textAlign: TextAlign.center,
                     ),
@@ -85,13 +87,21 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 20,
                           ),
                           utils.labelTextField(
-                            obscureText: true,
+                            obscureText: obscure1,
                             hintText: "******",
                             labelText: "PASSWORD",
-                            suffixIcon: const Icon(
-                              Icons.remove_red_eye,
-                              color: Colors.grey,
-                              size: 20,
+                            suffixIcon: GestureDetector(
+                              onTap: () {
+                                obscure1 = !obscure1;
+                                setState(() {});
+                              },
+                              child: Icon(
+                                !obscure1
+                                    ? CupertinoIcons.eye_slash_fill
+                                    : CupertinoIcons.eye,
+                                color: Colors.grey,
+                                size: 20,
+                              ),
                             ),
                           ),
                           const SizedBox(

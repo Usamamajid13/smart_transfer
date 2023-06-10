@@ -263,38 +263,44 @@ class AppUtils {
   }
 
   numPadButton({required String text, onTap}) {
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.grey,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Colors.grey,
+          ),
+          borderRadius: BorderRadius.circular(15.0),
         ),
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: Center(
-        child: Text(
-          text,
-          style: largeSemiBoldTextStyle(),
+        child: Center(
+          child: Text(
+            text,
+            style: largeSemiBoldTextStyle(),
+          ),
         ),
       ),
     );
   }
 
   numPadImageButton({required String image, onTap, scale}) {
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.grey,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Colors.grey,
+          ),
+          borderRadius: BorderRadius.circular(15.0),
         ),
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: Center(
-        child: Image.asset(
-          image,
-          scale: scale,
+        child: Center(
+          child: Image.asset(
+            image,
+            scale: scale,
+          ),
         ),
       ),
     );

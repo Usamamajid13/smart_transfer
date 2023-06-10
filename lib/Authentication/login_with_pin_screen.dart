@@ -12,6 +12,7 @@ class LoginWithPinScreen extends StatefulWidget {
 
 class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
   var utils = AppUtils();
+  List pinCodeList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +85,9 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                             height: 10,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: i == 0 ? Colors.black : Colors.grey[300],
+                              color: pinCodeList.asMap().containsKey(i)
+                                  ? Colors.black
+                                  : Colors.grey[300],
                             ),
                           ),
                       ],
@@ -92,7 +95,7 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                     const SizedBox(
                       height: 30,
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.7,
                       child: Center(
                         child: Wrap(
@@ -101,39 +104,83 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                           children: [
                             utils.numPadButton(
                               text: "1",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(1);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "2",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(2);
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "3",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(3);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "4",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(4);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "5",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(5);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "6",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(6);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "7",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(7);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "8",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(8);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadButton(
                               text: "9",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(9);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadImageButton(
                               image: "assets/faceIdIcon.png",
@@ -142,12 +189,22 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                             ),
                             utils.numPadButton(
                               text: "0",
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.length < 4) {
+                                  pinCodeList.add(0);
+                                  setState(() {});
+                                }
+                              },
                             ),
                             utils.numPadImageButton(
                               image: "assets/crossIcon.png",
                               scale: 28.0,
-                              onTap: () {},
+                              onTap: () {
+                                if (pinCodeList.isNotEmpty) {
+                                  pinCodeList.removeLast();
+                                  setState(() {});
+                                }
+                              },
                             ),
                           ],
                         ),

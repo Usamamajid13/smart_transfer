@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../AppConstants/constants.dart';
@@ -12,7 +13,8 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   var utils = AppUtils();
-  bool value = false;
+  bool obscure1 = true;
+  bool obscure2 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,26 +94,42 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             height: 5,
                           ),
                           utils.labelTextField(
-                            obscureText: true,
+                            obscureText: obscure2,
                             hintText: "Enter your password",
                             labelText: "PASSWORD",
-                            suffixIcon: const Icon(
-                              Icons.remove_red_eye,
-                              color: Colors.grey,
-                              size: 20,
+                            suffixIcon: GestureDetector(
+                              onTap: () {
+                                obscure2 = !obscure2;
+                                setState(() {});
+                              },
+                              child: Icon(
+                                !obscure2
+                                    ? CupertinoIcons.eye_slash_fill
+                                    : CupertinoIcons.eye,
+                                color: Colors.grey,
+                                size: 20,
+                              ),
                             ),
                           ),
                           const SizedBox(
                             height: 5,
                           ),
                           utils.labelTextField(
-                            obscureText: true,
+                            obscureText: obscure1,
                             hintText: "Confirm your password",
                             labelText: "CONFIRM PASSWORD",
-                            suffixIcon: const Icon(
-                              Icons.remove_red_eye,
-                              color: Colors.grey,
-                              size: 20,
+                            suffixIcon: GestureDetector(
+                              onTap: () {
+                                obscure1 = !obscure1;
+                                setState(() {});
+                              },
+                              child: Icon(
+                                !obscure1
+                                    ? CupertinoIcons.eye_slash_fill
+                                    : CupertinoIcons.eye,
+                                color: Colors.grey,
+                                size: 20,
+                              ),
                             ),
                           ),
                           const SizedBox(

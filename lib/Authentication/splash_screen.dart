@@ -61,7 +61,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   splashNavigator() {
     Timer(const Duration(seconds: 3), () async {
-      Navigator.pushNamed(context, catalogScreenRoute);
+      Navigator.pushNamedAndRemoveUntil(
+          context, catalogScreenRoute, (route) => false);
     });
   }
 }
