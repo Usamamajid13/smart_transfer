@@ -107,8 +107,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(1);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -117,6 +117,7 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(2);
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -124,8 +125,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(3);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -133,8 +134,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(4);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -142,8 +143,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(5);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -151,8 +152,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(6);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -160,8 +161,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(7);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -169,8 +170,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(8);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadButton(
@@ -178,8 +179,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(9);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadImageButton(
@@ -192,8 +193,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.length < 4) {
                                   pinCodeList.add(0);
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                             utils.numPadImageButton(
@@ -202,8 +203,8 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                               onTap: () {
                                 if (pinCodeList.isNotEmpty) {
                                   pinCodeList.removeLast();
-                                  setState(() {});
                                 }
+                                setState(() {});
                               },
                             ),
                           ],

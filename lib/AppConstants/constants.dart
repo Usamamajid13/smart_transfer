@@ -16,4 +16,7 @@ const signUpScreenRoute = "/signUpScreenRoute";
 const accountCreatedScreenRoute = "/accountCreatedScreenRoute";
 const loginWithPinScreenRoute = "/loginWithPinScreenRoute";
 const newPasswordScreenRoute = "/newPasswordScreenRoute";
+const homeBottomNavigationBarScreenRoute =
+    "/homeBottomNavigationBarScreenRoute";
+const verifyPhoneNumberPinScreenRoute = "/verifyPhoneNumberPinScreenRoute";
 const homeScreenRoute = "/homeScreenRoute";

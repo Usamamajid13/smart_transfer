@@ -44,7 +44,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                     "New password",
                     style: utils.xmediumTitleSemiBoldTextStyle(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                 ],

@@ -43,7 +43,7 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                     "Forgot password",
                     style: utils.xmediumTitleSemiBoldTextStyle(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                 ],

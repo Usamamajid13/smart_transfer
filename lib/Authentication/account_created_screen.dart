@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../AppConstants/constants.dart';
 import '../Utils/app_utils.dart';
 
 class AccountCreatedScreen extends StatefulWidget {
@@ -68,7 +69,10 @@ class _AccountCreatedScreenState extends State<AccountCreatedScreen> {
                     const Spacer(),
                     utils.bigButton(
                       width: MediaQuery.of(context).size.width * 0.8,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, homeBottomNavigationBarScreenRoute);
+                      },
                       fontSize: 16,
                       text: "Continue",
                       borderRadius: 15.0,

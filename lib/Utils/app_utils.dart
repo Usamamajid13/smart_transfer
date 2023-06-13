@@ -81,6 +81,14 @@ class AppUtils {
     );
   }
 
+  smallTitleSemiBoldTextStyle({color}) {
+    return TextStyle(
+      color: color,
+      fontWeight: FontWeight.w500,
+      fontSize: 12,
+    );
+  }
+
   mediumTitleTextStyle({color}) {
     return TextStyle(
       fontSize: 14,
@@ -212,7 +220,7 @@ class AppUtils {
       validator,
       prefixIcon,
       onChange}) {
-    return Container(
+    return SizedBox(
       height: 70,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -223,7 +231,7 @@ class AppUtils {
               color: Colors.black,
             ),
           ),
-          Container(
+          SizedBox(
             height: 40,
             child: TextFormField(
               onTap: onTap,
@@ -301,6 +309,35 @@ class AppUtils {
             image,
             scale: scale,
           ),
+        ),
+      ),
+    );
+  }
+
+  moreWidget({image, scale, text, color}) {
+    return Expanded(
+      child: Container(
+        height: 70,
+        decoration: BoxDecoration(
+          color: color.withOpacity(0.2),
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        padding: const EdgeInsets.only(left: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(
+              image,
+              scale: scale,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Text(
+              text,
+              style: smallTitleSemiBoldTextStyle(),
+            )
+          ],
         ),
       ),
     );

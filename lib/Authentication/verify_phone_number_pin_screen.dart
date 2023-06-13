@@ -1,22 +1,21 @@
-import 'package:country_picker/country_picker.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 import '../AppConstants/constants.dart';
 import '../Utils/app_utils.dart';
 
-class VerifyPhoneNumberScreen extends StatefulWidget {
-  const VerifyPhoneNumberScreen({Key? key}) : super(key: key);
+class VerifyPhoneNumberPinScreen extends StatefulWidget {
+  const VerifyPhoneNumberPinScreen({Key? key}) : super(key: key);
 
   @override
-  State<VerifyPhoneNumberScreen> createState() =>
-      _VerifyPhoneNumberScreenState();
+  State<VerifyPhoneNumberPinScreen> createState() =>
+      _VerifyPhoneNumberPinScreenState();
 }
 
-class _VerifyPhoneNumberScreenState extends State<VerifyPhoneNumberScreen> {
+class _VerifyPhoneNumberPinScreenState
+    extends State<VerifyPhoneNumberPinScreen> {
   var utils = AppUtils();
 
-  String countryFlag = "🇦🇱";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,58 +85,49 @@ class _VerifyPhoneNumberScreenState extends State<VerifyPhoneNumberScreen> {
                           const SizedBox(
                             height: 30,
                           ),
-                          utils.labelTextField(
-                            obscureText: false,
-                            hintText: "+17 123969821",
-                            labelText: "PHONE NUMBER",
-                            prefixIcon: GestureDetector(
-                              onTap: () {
-                                showCountryPicker(
-                                  context: context,
-                                  showPhoneCode: true,
-                                  onSelect: (Country country) {
-                                    countryFlag = country.phoneCode;
-                                    setState(() {});
-                                    if (kDebugMode) {
-                                      print(
-                                          'Select country: ${country.flagEmoji}');
-                                    }
-                                  },
-                                );
-                              },
-                              child: SizedBox(
-                                width: 30,
-                                height: 50,
-                                child: Center(
-                                  child: Text(
-                                    countryFlag,
-                                    style: const TextStyle(
-                                      fontSize: 20,
-                                    ),
+                          Pinput(
+                            length: 5,
+                            onCompleted: (val) {
+                              Navigator.pushNamed(
+                                  context, accountCreatedScreenRoute);
+                            },
+                            defaultPinTheme: PinTheme(
+                              width: 56,
+                              height: 56,
+                              textStyle: const TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                              ),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.blueGrey.withOpacity(0.6),
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 80,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Didn't received the otp? ",
+                                style: utils.mediumTitleTextStyle(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {},
+                                child: Text(
+                                  "Resend",
+                                  style: utils.mediumTitleTextStyle(
+                                    color: darkBlueColor,
                                   ),
                                 ),
                               ),
-                            ),
-                            onChange: (val) {
-                              setState(() {});
-                            },
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          utils.bigButton(
-                            width: MediaQuery.of(context).size.width * 0.8,
-                            onTap: () {
-                              Navigator.pushNamed(
-                                  context, verifyPhoneNumberPinScreenRoute);
-                            },
-                            fontSize: 16,
-                            text: "Confirm",
-                            borderRadius: 15.0,
-                            textColor: Colors.white,
-                          ),
-                          const SizedBox(
-                            height: 20,
+                            ],
                           ),
                         ],
                       ),
