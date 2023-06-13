@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smart_transfer/Utils/app_utils.dart';
 
+import '../../AppConstants/constants.dart';
+
 class MoreScreen extends StatefulWidget {
   const MoreScreen({Key? key}) : super(key: key);
 
@@ -98,6 +100,9 @@ class _MoreScreenState extends State<MoreScreen> {
               children: [
                 utils.moreWidget(
                   text: "FAQ",
+                  onTap: () {
+                    Navigator.pushNamed(context, faqScreenRoute);
+                  },
                   scale: 25.0,
                   image: "assets/questionChat.png",
                   color: Colors.yellow,
@@ -120,6 +125,9 @@ class _MoreScreenState extends State<MoreScreen> {
               children: [
                 utils.moreWidget(
                   text: "Privacy Policy",
+                  onTap: () {
+                    Navigator.pushNamed(context, privacyPolicyScreenRoute);
+                  },
                   scale: 25.0,
                   image: "assets/privacyIcon.png",
                   color: Colors.greenAccent,

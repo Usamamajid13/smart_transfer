@@ -14,8 +14,10 @@ const forgotPasswordEmailScreenRoute = "/forgotPasswordEmailScreenRoute";
 const verifyPhoneNumberScreenRoute = "/verifyPhoneNumberScreenRoute";
 const signUpScreenRoute = "/signUpScreenRoute";
 const accountCreatedScreenRoute = "/accountCreatedScreenRoute";
+const privacyPolicyScreenRoute = "/privacyPolicyScreenRoute";
 const loginWithPinScreenRoute = "/loginWithPinScreenRoute";
 const newPasswordScreenRoute = "/newPasswordScreenRoute";
+const faqScreenRoute = "/faqScreenRoute";
 const homeBottomNavigationBarScreenRoute =
     "/homeBottomNavigationBarScreenRoute";
 const verifyPhoneNumberPinScreenRoute = "/verifyPhoneNumberPinScreenRoute";

@@ -14,6 +14,8 @@ import 'Authentication/splash_screen.dart';
 import 'Authentication/verify_phone_number_pin_screen.dart';
 import 'Authentication/verify_phone_screen.dart';
 import 'Home/BottomNavigationBarScreens/home_bottom_navigation_bar_screen.dart';
+import 'Home/MoreScreens/faq_screen.dart';
+import 'Home/MoreScreens/privacy_policy_screen.dart';
 import 'MainScreens/home_screen.dart';
 
 void main() {
@@ -39,8 +41,10 @@ class MyApp extends StatelessWidget {
             const ForgotPasswordEmailScreen(),
         signUpScreenRoute: (context) => const SignUpScreen(),
         accountCreatedScreenRoute: (context) => const AccountCreatedScreen(),
+        privacyPolicyScreenRoute: (context) => const PrivacyPolicyScreen(),
         loginWithPinScreenRoute: (context) => const LoginWithPinScreen(),
         newPasswordScreenRoute: (context) => const NewPasswordScreen(),
+        faqScreenRoute: (context) => const FaqScreen(),
         homeBottomNavigationBarScreenRoute: (context) =>
             const HomeBottomNavigationBarScreen(),
         verifyPhoneNumberPinScreenRoute: (context) =>

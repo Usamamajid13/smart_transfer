@@ -314,30 +314,33 @@ class AppUtils {
     );
   }
 
-  moreWidget({image, scale, text, color}) {
+  moreWidget({onTap, image, scale, text, color}) {
     return Expanded(
-      child: Container(
-        height: 70,
-        decoration: BoxDecoration(
-          color: color.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        padding: const EdgeInsets.only(left: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Image.asset(
-              image,
-              scale: scale,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(
-              text,
-              style: smallTitleSemiBoldTextStyle(),
-            )
-          ],
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          height: 70,
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.2),
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          padding: const EdgeInsets.only(left: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                image,
+                scale: scale,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(
+                text,
+                style: smallTitleSemiBoldTextStyle(),
+              )
+            ],
+          ),
         ),
       ),
     );

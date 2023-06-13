@@ -1,8 +1,10 @@
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_transfer/AppConstants/constants.dart';
 
-import 'more_screen.dart';
+import '../MoreScreens/more_screen.dart';
+import 'dashboard_screen.dart';
+import 'notifications_screen.dart';
 
 class HomeBottomNavigationBarScreen extends StatefulWidget {
   const HomeBottomNavigationBarScreen({Key? key}) : super(key: key);
@@ -32,11 +34,12 @@ class _HomeBottomNavigationBarScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: FloatingNavbar(
-        width: MediaQuery.of(context).size.width * 0.9,
+      bottomNavigationBar: DotNavigationBar(
+        marginR: const EdgeInsets.symmetric(horizontal: 15),
+        dotIndicatorColor: Colors.transparent,
+        paddingR: EdgeInsets.zero,
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.grey,
-        selectedBackgroundColor: Colors.white,
         selectedItemColor: darkBlueColor,
         onTap: (index) {
           tabIndex(index);
@@ -45,19 +48,70 @@ class _HomeBottomNavigationBarScreenState
               curve: Curves.easeIn);
           setState(() {});
         },
+        enablePaddingAnimation: false,
         currentIndex: _tabIndex,
+        borderRadius: 10.0,
+        enableFloatingNavBar: true,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            offset: const Offset(0, 1),
+            blurRadius: 2,
+          )
+        ],
         items: [
-          FloatingNavbarItem(
-            icon: Icons.dashboard_outlined,
-            title: 'Dashboard',
+          DotNavigationBarItem(
+            icon: Column(
+              children: [
+                const Icon(
+                  Icons.dashboard_outlined,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Dashboard",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: _tabIndex == 0 ? darkBlueColor : Colors.grey,
+                  ),
+                )
+              ],
+            ),
           ),
-          FloatingNavbarItem(
-            icon: Icons.notifications_active_outlined,
-            title: 'Notifications',
+          DotNavigationBarItem(
+            icon: Column(
+              children: [
+                const Icon(Icons.notifications_active_outlined),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Notifications",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: _tabIndex == 1 ? darkBlueColor : Colors.grey,
+                  ),
+                )
+              ],
+            ),
           ),
-          FloatingNavbarItem(
-            icon: Icons.add_circle_outline,
-            title: 'More',
+          DotNavigationBarItem(
+            icon: Column(
+              children: [
+                const Icon(Icons.add_circle_outline),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "More",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: _tabIndex == 2 ? darkBlueColor : Colors.grey,
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
@@ -67,10 +121,10 @@ class _HomeBottomNavigationBarScreenState
           tabIndex(v);
         },
         children: const [
-          // DashboardScreen(),
+          DashboardScreen(),
           // EditMealsScreen(),
           // FavouriteRecipeScreen(),
-          // NotificationsScreen(),
+          NotificationsScreen(),
           MoreScreen(),
         ],
       ),
