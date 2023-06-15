@@ -20,11 +20,11 @@ class _FundTransferToScreenState extends State<FundTransferToScreen> {
         onPressed: () {
           Navigator.pushNamed(context, addBeneficiaryAccountScreenRoute);
         },
-        child: Icon(
+        backgroundColor: darkBlueColor,
+        child: const Icon(
           Icons.add,
           color: Colors.white,
         ),
-        backgroundColor: darkBlueColor,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -88,29 +88,35 @@ class _FundTransferToScreenState extends State<FundTransferToScreen> {
               for (int i = 0; i < 10; i++)
                 Column(
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                          width: 40,
-                          height: 40,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image: AssetImage(
-                                "assets/dummyProfileImage.png",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, fundTransferAmountScreenRoute);
+                      },
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/dummyProfileImage.png",
+                                ),
+                                fit: BoxFit.cover,
                               ),
-                              fit: BoxFit.cover,
                             ),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        Text(
-                          "Usama Majid",
-                          style: utils.mediumTitleSemiBoldTextStyle(),
-                        )
-                      ],
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            "Usama Majid",
+                            style: utils.mediumTitleSemiBoldTextStyle(),
+                          )
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 20,

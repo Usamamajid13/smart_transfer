@@ -135,6 +135,45 @@ class AppUtils {
     );
   }
 
+  bigWhiteButton(
+      {width,
+      onTap,
+      borderWidth,
+      borderRadius,
+      text,
+      textColor,
+      fontSize,
+      fontWeight}) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        height: 50,
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(borderRadius ?? 0),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.7),
+                blurRadius: 3,
+                offset: const Offset(0, 2),
+              )
+            ],
+            color: Colors.white),
+        child: Center(
+          child: Text(
+            text.toString(),
+            style: TextStyle(
+              color: textColor ?? Colors.black,
+              fontSize: fontSize == null ? 13.0 : fontSize.toDouble(),
+              fontWeight: fontWeight ?? FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   textField(
       {controller,
       hintText,

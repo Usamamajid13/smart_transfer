@@ -58,7 +58,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
                   utils.labelTextField(
                     obscureText: false,
                     hintText: "Enter value",
-                    suffixIcon: Icon(
+                    suffixIcon: const Icon(
                       Icons.search,
                       color: Colors.grey,
                     ),

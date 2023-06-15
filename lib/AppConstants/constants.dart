@@ -16,6 +16,8 @@ const signUpScreenRoute = "/signUpScreenRoute";
 const accountCreatedScreenRoute = "/accountCreatedScreenRoute";
 const transactionHistoryScreenRoute = "/transactionHistoryScreenRoute";
 const privacyPolicyScreenRoute = "/privacyPolicyScreenRoute";
+const fundTransferAmountScreenRoute = "/fundTransferAmountScreenRoute";
+const transactionDetailsScreenRoute = "/transactionDetailsScreenRoute";
 const loginWithPinScreenRoute = "/loginWithPinScreenRoute";
 const newPasswordScreenRoute = "/newPasswordScreenRoute";
 const faqScreenRoute = "/faqScreenRoute";
@@ -24,4 +26,5 @@ const homeBottomNavigationBarScreenRoute =
     "/homeBottomNavigationBarScreenRoute";
 const verifyPhoneNumberPinScreenRoute = "/verifyPhoneNumberPinScreenRoute";
 const homeScreenRoute = "/homeScreenRoute";
+const paymentConfirmationScreenRoute = "/paymentConfirmationScreenRoute";
 const addBeneficiaryAccountScreenRoute = "/addBeneficiaryAccountScreenRoute";

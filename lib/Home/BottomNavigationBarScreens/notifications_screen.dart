@@ -136,7 +136,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       Container(
                         width: 20,
                         height: 20,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.orange,
                           shape: BoxShape.circle,
                         ),
@@ -226,7 +226,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       Container(
                         width: 20,
                         height: 20,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.red,
                           shape: BoxShape.circle,
                         ),

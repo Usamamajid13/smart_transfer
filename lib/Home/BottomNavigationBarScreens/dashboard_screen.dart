@@ -186,59 +186,68 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             const SizedBox(
                               height: 30,
                             ),
-                            Row(
-                              children: [
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withOpacity(0.1),
-                                        blurRadius: 5,
-                                        offset: const Offset(0, 2),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, transactionDetailsScreenRoute);
+                              },
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black.withOpacity(0.1),
+                                          blurRadius: 5,
+                                          offset: const Offset(0, 2),
+                                        )
+                                      ],
+                                    ),
+                                    child: const Center(
+                                      child: Icon(
+                                        Icons.compare_arrows_rounded,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Adalyn Roth",
+                                        style:
+                                            utils.mediumTitleSemiBoldTextStyle(
+                                          color: Colors.black.withOpacity(0.7),
+                                        ),
+                                      ),
+                                      Text(
+                                        "Money Transfer",
+                                        style: utils.mediumTitleTextStyle(
+                                          color: Colors.black.withOpacity(0.5),
+                                        ),
                                       )
                                     ],
                                   ),
-                                  child: const Center(
-                                    child: Icon(
-                                      Icons.compare_arrows_rounded,
+                                  const Spacer(),
+                                  Text(
+                                    "-123.00",
+                                    style: utils.smallTitleSemiBoldTextStyle(
+                                      color:
+                                          i == 2 ? Colors.green : Colors.black,
                                     ),
                                   ),
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Adalyn Roth",
-                                      style: utils.mediumTitleSemiBoldTextStyle(
-                                        color: Colors.black.withOpacity(0.7),
-                                      ),
-                                    ),
-                                    Text(
-                                      "Money Transfer",
-                                      style: utils.mediumTitleTextStyle(
-                                        color: Colors.black.withOpacity(0.5),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                const Spacer(),
-                                Text(
-                                  "-123.00",
-                                  style: utils.smallTitleSemiBoldTextStyle(
-                                    color: i == 2 ? Colors.green : Colors.black,
+                                  const SizedBox(
+                                    width: 5,
                                   ),
-                                ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ],
                         )
