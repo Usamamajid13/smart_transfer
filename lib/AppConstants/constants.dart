@@ -14,11 +14,14 @@ const forgotPasswordEmailScreenRoute = "/forgotPasswordEmailScreenRoute";
 const verifyPhoneNumberScreenRoute = "/verifyPhoneNumberScreenRoute";
 const signUpScreenRoute = "/signUpScreenRoute";
 const accountCreatedScreenRoute = "/accountCreatedScreenRoute";
+const transactionHistoryScreenRoute = "/transactionHistoryScreenRoute";
 const privacyPolicyScreenRoute = "/privacyPolicyScreenRoute";
 const loginWithPinScreenRoute = "/loginWithPinScreenRoute";
 const newPasswordScreenRoute = "/newPasswordScreenRoute";
 const faqScreenRoute = "/faqScreenRoute";
+const fundTransferToScreenRoute = "/fundTransferToScreenRoute";
 const homeBottomNavigationBarScreenRoute =
     "/homeBottomNavigationBarScreenRoute";
 const verifyPhoneNumberPinScreenRoute = "/verifyPhoneNumberPinScreenRoute";
 const homeScreenRoute = "/homeScreenRoute";
+const addBeneficiaryAccountScreenRoute = "/addBeneficiaryAccountScreenRoute";

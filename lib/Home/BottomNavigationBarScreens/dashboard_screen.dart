@@ -95,17 +95,22 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple[900],
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        CupertinoIcons.arrow_2_squarepath,
-                        color: Colors.white,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, fundTransferToScreenRoute);
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple[900],
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          CupertinoIcons.arrow_2_squarepath,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
@@ -113,7 +118,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     height: 10,
                   ),
                   Text(
-                    "Money\nTransfer",
+                    "Money Transfer",
                     style: utils.smallTitleSemiBoldTextStyle(
                       color: Colors.white,
                     ),
@@ -162,7 +167,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             style: utils.largeSemiBoldTextStyle(),
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, transactionHistoryScreenRoute);
+                            },
                             child: Text(
                               "View All",
                               style: utils.mediumTitleSemiBoldTextStyle(
