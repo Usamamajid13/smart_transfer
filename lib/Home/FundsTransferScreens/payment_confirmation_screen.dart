@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../AppConstants/constants.dart';
 import '../../Utils/app_utils.dart';
 
 class PaymentConfirmationScreen extends StatefulWidget {
@@ -202,7 +203,10 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           utils.bigButton(
                             width: MediaQuery.of(context).size.width * 0.8,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, somethingWentWrongScreenRoute);
+                            },
                             fontSize: 16,
                             text: "Confirm",
                             borderRadius: 15.0,

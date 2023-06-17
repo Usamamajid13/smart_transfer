@@ -185,7 +185,10 @@ class _LoginWithPinScreenState extends State<LoginWithPinScreen> {
                             ),
                             utils.numPadImageButton(
                               image: "assets/faceIdIcon.png",
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context,
+                                    homeBottomNavigationBarScreenRoute);
+                              },
                               scale: 12.0,
                             ),
                             utils.numPadButton(

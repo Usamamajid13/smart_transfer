@@ -18,6 +18,8 @@ import 'Home/FundsTransferScreens/add_beneficiary_account_screen.dart';
 import 'Home/FundsTransferScreens/fund_transfer_amount_screen.dart';
 import 'Home/FundsTransferScreens/fund_transfer_to_screen.dart';
 import 'Home/FundsTransferScreens/payment_confirmation_screen.dart';
+import 'Home/FundsTransferScreens/payment_successfull_screen.dart';
+import 'Home/FundsTransferScreens/something_went_wrong_screen.dart';
 import 'Home/MoreScreens/faq_screen.dart';
 import 'Home/MoreScreens/privacy_policy_screen.dart';
 import 'MainScreens/home_screen.dart';
@@ -40,6 +42,8 @@ class MyApp extends StatelessWidget {
         splashScreenRoute: (context) => const SplashScreen(),
         catalogScreenRoute: (context) => const CatalogScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
+        somethingWentWrongScreenRoute: (context) =>
+            const somethingWentWrongScreen(),
         paymentConfirmationScreenRoute: (context) =>
             const PaymentConfirmationScreen(),
         addBeneficiaryAccountScreenRoute: (context) =>
@@ -58,6 +62,8 @@ class MyApp extends StatelessWidget {
             const FundTransferAmountScreen(),
         transactionDetailsScreenRoute: (context) =>
             const TransactionDetailsScreen(),
+        paymentSuccessfullScreenRoute: (context) =>
+            const PaymentSuccessfullScreen(),
         loginWithPinScreenRoute: (context) => const LoginWithPinScreen(),
         newPasswordScreenRoute: (context) => const NewPasswordScreen(),
         faqScreenRoute: (context) => const FaqScreen(),
