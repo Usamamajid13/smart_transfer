@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import '../../AppConstants/constants.dart';
 import '../../Utils/app_utils.dart';
 
-class somethingWentWrongScreen extends StatefulWidget {
-  const somethingWentWrongScreen({Key? key}) : super(key: key);
+class SomethingWentWrongScreen extends StatefulWidget {
+  const SomethingWentWrongScreen({Key? key}) : super(key: key);
 
   @override
-  State<somethingWentWrongScreen> createState() =>
-      _somethingWentWrongScreenState();
+  State<SomethingWentWrongScreen> createState() =>
+      SomethingWentWrongScreenState();
 }
 
-class _somethingWentWrongScreenState extends State<somethingWentWrongScreen> {
+class SomethingWentWrongScreenState extends State<SomethingWentWrongScreen> {
   var utils = AppUtils();
 
   @override
@@ -120,7 +120,7 @@ class _somethingWentWrongScreenState extends State<somethingWentWrongScreen> {
                             width: MediaQuery.of(context).size.width * 0.37,
                             onTap: () {
                               Navigator.pushNamed(
-                                  context, paymentSuccessfullScreenRoute);
+                                  context, paymentSuccessfulScreenRoute);
                             },
                             fontSize: 16,
                             text: "Try Again",

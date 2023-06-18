@@ -25,6 +25,7 @@ import 'Home/MoreScreens/privacy_policy_screen.dart';
 import 'MainScreens/home_screen.dart';
 import 'MainScreens/transaction_details_screen.dart';
 import 'MainScreens/transaction_history_screen.dart';
+import 'ProfileScreens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         catalogScreenRoute: (context) => const CatalogScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
         somethingWentWrongScreenRoute: (context) =>
-            const somethingWentWrongScreen(),
+            const SomethingWentWrongScreen(),
         paymentConfirmationScreenRoute: (context) =>
             const PaymentConfirmationScreen(),
         addBeneficiaryAccountScreenRoute: (context) =>
@@ -62,12 +63,13 @@ class MyApp extends StatelessWidget {
             const FundTransferAmountScreen(),
         transactionDetailsScreenRoute: (context) =>
             const TransactionDetailsScreen(),
-        paymentSuccessfullScreenRoute: (context) =>
-            const PaymentSuccessfullScreen(),
+        paymentSuccessfulScreenRoute: (context) =>
+            const PaymentSuccessfulScreen(),
         loginWithPinScreenRoute: (context) => const LoginWithPinScreen(),
         newPasswordScreenRoute: (context) => const NewPasswordScreen(),
         faqScreenRoute: (context) => const FaqScreen(),
         fundTransferToScreenRoute: (context) => const FundTransferToScreen(),
+        profileScreenRoute: (context) => const ProfileScreen(),
         homeBottomNavigationBarScreenRoute: (context) =>
             const HomeBottomNavigationBarScreen(),
         verifyPhoneNumberPinScreenRoute: (context) =>

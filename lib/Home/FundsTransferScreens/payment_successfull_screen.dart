@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import '../../AppConstants/constants.dart';
 import '../../Utils/app_utils.dart';
 
-class PaymentSuccessfullScreen extends StatefulWidget {
-  const PaymentSuccessfullScreen({Key? key}) : super(key: key);
+class PaymentSuccessfulScreen extends StatefulWidget {
+  const PaymentSuccessfulScreen({Key? key}) : super(key: key);
 
   @override
-  State<PaymentSuccessfullScreen> createState() =>
-      _PaymentSuccessfullScreenState();
+  State<PaymentSuccessfulScreen> createState() =>
+      _PaymentSuccessfulScreenState();
 }
 
-class _PaymentSuccessfullScreenState extends State<PaymentSuccessfullScreen> {
+class _PaymentSuccessfulScreenState extends State<PaymentSuccessfulScreen> {
   var utils = AppUtils();
 
   @override

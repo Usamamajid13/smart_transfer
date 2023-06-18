@@ -52,6 +52,7 @@ class _HomeBottomNavigationBarScreenState
         currentIndex: _tabIndex,
         borderRadius: 10.0,
         enableFloatingNavBar: true,
+        itemPadding: const EdgeInsets.symmetric(horizontal: 1, vertical: 10),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.3),
@@ -82,15 +83,53 @@ class _HomeBottomNavigationBarScreenState
           DotNavigationBarItem(
             icon: Column(
               children: [
+                const Icon(
+                  Icons.group,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Recipient",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: _tabIndex == 1 ? darkBlueColor : Colors.grey,
+                  ),
+                )
+              ],
+            ),
+          ),
+          DotNavigationBarItem(
+            icon: Column(
+              children: [
+                const Icon(
+                  Icons.add_card_outlined,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Cards",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: _tabIndex == 2 ? darkBlueColor : Colors.grey,
+                  ),
+                )
+              ],
+            ),
+          ),
+          DotNavigationBarItem(
+            icon: Column(
+              children: [
                 const Icon(Icons.notifications_active_outlined),
                 const SizedBox(
                   height: 5,
                 ),
                 Text(
-                  "Notifications",
+                  "Notification",
                   style: TextStyle(
                     fontSize: 12,
-                    color: _tabIndex == 1 ? darkBlueColor : Colors.grey,
+                    color: _tabIndex == 3 ? darkBlueColor : Colors.grey,
                   ),
                 )
               ],
@@ -107,7 +146,7 @@ class _HomeBottomNavigationBarScreenState
                   "More",
                   style: TextStyle(
                     fontSize: 12,
-                    color: _tabIndex == 2 ? darkBlueColor : Colors.grey,
+                    color: _tabIndex == 4 ? darkBlueColor : Colors.grey,
                   ),
                 )
               ],

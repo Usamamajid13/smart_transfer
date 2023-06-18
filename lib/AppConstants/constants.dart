@@ -18,11 +18,12 @@ const transactionHistoryScreenRoute = "/transactionHistoryScreenRoute";
 const privacyPolicyScreenRoute = "/privacyPolicyScreenRoute";
 const fundTransferAmountScreenRoute = "/fundTransferAmountScreenRoute";
 const transactionDetailsScreenRoute = "/transactionDetailsScreenRoute";
-const paymentSuccessfullScreenRoute = "/paymentSuccessfullScreenRoute";
+const paymentSuccessfulScreenRoute = "/paymentSuccessfullScreenRoute";
 const loginWithPinScreenRoute = "/loginWithPinScreenRoute";
 const newPasswordScreenRoute = "/newPasswordScreenRoute";
 const faqScreenRoute = "/faqScreenRoute";
 const fundTransferToScreenRoute = "/fundTransferToScreenRoute";
+const profileScreenRoute = "/profileScreenRoute";
 const homeBottomNavigationBarScreenRoute =
     "/homeBottomNavigationBarScreenRoute";
 const verifyPhoneNumberPinScreenRoute = "/verifyPhoneNumberPinScreenRoute";
