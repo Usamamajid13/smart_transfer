@@ -45,8 +45,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     "Profile",
                     style: utils.xmediumTitleSemiBoldTextStyle(),
                   ),
-                  const SizedBox(
-                    width: 20,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, editProfileScreenRoute);
+                    },
+                    child: const Icon(
+                      Icons.edit,
+                      color: darkBlueColor,
+                    ),
                   ),
                 ],
               ),

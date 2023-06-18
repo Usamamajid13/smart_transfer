@@ -28,6 +28,7 @@ const homeBottomNavigationBarScreenRoute =
     "/homeBottomNavigationBarScreenRoute";
 const verifyPhoneNumberPinScreenRoute = "/verifyPhoneNumberPinScreenRoute";
 const homeScreenRoute = "/homeScreenRoute";
+const editProfileScreenRoute = "/editProfileScreenRoute";
 const somethingWentWrongScreenRoute = "/somethingWentWrongScreenRoute";
 const paymentConfirmationScreenRoute = "/paymentConfirmationScreenRoute";
 const addBeneficiaryAccountScreenRoute = "/addBeneficiaryAccountScreenRoute";

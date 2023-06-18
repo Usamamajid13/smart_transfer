@@ -25,6 +25,7 @@ import 'Home/MoreScreens/privacy_policy_screen.dart';
 import 'MainScreens/home_screen.dart';
 import 'MainScreens/transaction_details_screen.dart';
 import 'MainScreens/transaction_history_screen.dart';
+import 'ProfileScreens/edit_profile_screen.dart';
 import 'ProfileScreens/profile_screen.dart';
 
 void main() {
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         splashScreenRoute: (context) => const SplashScreen(),
         catalogScreenRoute: (context) => const CatalogScreen(),
         homeScreenRoute: (context) => const HomeScreen(),
+        editProfileScreenRoute: (context) => const EditProfileScreen(),
         somethingWentWrongScreenRoute: (context) =>
             const SomethingWentWrongScreen(),
         paymentConfirmationScreenRoute: (context) =>
