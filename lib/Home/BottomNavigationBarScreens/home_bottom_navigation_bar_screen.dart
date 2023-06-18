@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:smart_transfer/AppConstants/constants.dart';
 
 import '../MoreScreens/more_screen.dart';
+import 'cards_screen.dart';
 import 'dashboard_screen.dart';
 import 'notifications_screen.dart';
 
@@ -161,8 +162,8 @@ class _HomeBottomNavigationBarScreenState
         },
         children: const [
           DashboardScreen(),
-          // EditMealsScreen(),
-          // FavouriteRecipeScreen(),
+          // RecepientsScreen(),
+          CardsScreen(),
           NotificationsScreen(),
           MoreScreen(),
         ],
