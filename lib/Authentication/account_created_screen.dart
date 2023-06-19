@@ -60,7 +60,7 @@ class _AccountCreatedScreenState extends State<AccountCreatedScreen> {
                       height: 20,
                     ),
                     Text(
-                      "Your account had been created \nsuccessfully.",
+                      "Your account has been created \nsuccessfully.",
                       style: utils.mediumTitleSemiBoldTextStyle(
                         color: Colors.grey,
                       ),

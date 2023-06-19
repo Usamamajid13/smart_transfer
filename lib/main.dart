@@ -23,6 +23,7 @@ import 'Home/FundsTransferScreens/payment_successfull_screen.dart';
 import 'Home/FundsTransferScreens/something_went_wrong_screen.dart';
 import 'Home/MoreScreens/faq_screen.dart';
 import 'Home/MoreScreens/privacy_policy_screen.dart';
+import 'MainScreens/add_new_card_screen.dart';
 import 'MainScreens/home_screen.dart';
 import 'MainScreens/transaction_details_screen.dart';
 import 'MainScreens/transaction_history_screen.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         homeScreenRoute: (context) => const HomeScreen(),
         changePinCodeScreenRoute: (context) => const ChangePinCodeScreen(),
         editProfileScreenRoute: (context) => const EditProfileScreen(),
+        addNewCardScreenRoute: (context) => const AddNewCardScreen(),
         somethingWentWrongScreenRoute: (context) =>
             const SomethingWentWrongScreen(),
         paymentConfirmationScreenRoute: (context) =>

@@ -33,6 +33,9 @@ class _MoreScreenState extends State<MoreScreen> {
             Row(
               children: [
                 utils.moreWidget(
+                  onTap: () {
+                    Navigator.pushNamed(context, addNewCardScreenRoute);
+                  },
                   text: "Add New Card",
                   scale: 25.0,
                   image: "assets/cardIcon.png",

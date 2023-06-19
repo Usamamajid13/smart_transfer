@@ -31,14 +31,15 @@ class _SplashScreenState extends State<SplashScreen> {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  purpleColor,
-                  blueColor,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
+              color: Colors.white,
+              // gradient: LinearGradient(
+              //   colors: [
+              //     purpleColor,
+              //     blueColor,
+              //   ],
+              //   begin: Alignment.topLeft,
+              //   end: Alignment.bottomRight,
+              // ),
             ),
           ),
           // const Center(
@@ -60,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   splashNavigator() {
-    Timer(const Duration(seconds: 3), () async {
+    Timer(const Duration(seconds: 2), () async {
       Navigator.pushNamedAndRemoveUntil(
           context, catalogScreenRoute, (route) => false);
     });
