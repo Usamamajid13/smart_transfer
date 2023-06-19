@@ -38,28 +38,131 @@ class _CardsScreenState extends State<CardsScreen> {
                   const SizedBox(
                     height: 70,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        Text(
-                          "Exchange rates",
-                          style: utils.largeSemiBoldTextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                      ],
+                  Center(
+                    child: Text(
+                      "Exchange rates",
+                      style: utils.largeSemiBoldTextStyle(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 40,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                        color: Colors.grey[100],
+                      ),
+                      child: Row(
+                        children: [
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Image.asset(
+                            "assets/visaCardIcon2.png",
+                            scale: 12,
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "1323 **** ****2412",
+                                style: utils.smallTitleTextStyle(
+                                  color: Colors.grey[700],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "EXPIRE 12/23",
+                                style: utils.mediumTitleSemiBoldTextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Icon(
+                            Icons.copy,
+                            size: 15,
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                        color: Colors.grey[100],
+                      ),
+                      child: Row(
+                        children: [
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Image.asset(
+                            "assets/visaCardIcon1.png",
+                            scale: 12,
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "1323 **** ****2412",
+                                style: utils.smallTitleTextStyle(
+                                  color: Colors.grey[700],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "EXPIRE 12/23",
+                                style: utils.mediumTitleSemiBoldTextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Icon(
+                            Icons.copy,
+                            size: 15,
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -88,7 +191,7 @@ class _CardsScreenState extends State<CardsScreen> {
                           color: Colors.grey,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
