@@ -107,12 +107,6 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                               ),
                             ),
                           ),
-                          // Image.asset(
-                          //   "assets/visa.png",
-                          // ),
-                          // Image.asset(
-                          //   "assets/master.png",
-                          // ),
                         ],
                       ),
                     ),
@@ -181,22 +175,164 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
                               ],
                             ),
                           )
-                          // Image.asset(
-                          //   "assets/visa.png",
-                          // ),
-                          // Image.asset(
-                          //   "assets/master.png",
-                          // ),
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     utils.labelTextField(
                       obscureText: false,
                       hintText: "Enter your name",
                       labelText: "NAME ON CARD",
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "BILLING ADDRESS",
+                      style: utils.smallTitleSemiBoldTextStyle(),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                        ),
+                        border: Border.all(
+                          width: 0.5,
+                          color: Colors.black,
+                        ),
+                      ),
+                      child: const Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Address Line 1",
+                                contentPadding: EdgeInsets.only(
+                                  left: 10,
+                                  bottom: 5,
+                                ),
+                                hintStyle: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0.5,
+                          color: Colors.black,
+                        ),
+                      ),
+                      child: const Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Address Line 2",
+                                contentPadding: EdgeInsets.only(
+                                  left: 10,
+                                  bottom: 5,
+                                ),
+                                hintStyle: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(10.0),
+                          bottomRight: Radius.circular(10.0),
+                        ),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: "City",
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(
+                                  left: 10,
+                                  bottom: 5,
+                                ),
+                                hintStyle: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 1,
+                            height: 45,
+                            color: Colors.grey,
+                          ),
+                          const Expanded(
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: "Postal Code",
+                                      border: InputBorder.none,
+                                      contentPadding: EdgeInsets.only(
+                                        left: 10,
+                                        bottom: 5,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    utils.bigButton(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      fontSize: 16,
+                      text: "Add New Card",
+                      borderRadius: 15.0,
+                      textColor: Colors.white,
                     ),
                   ],
                 ),
