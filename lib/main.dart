@@ -13,6 +13,7 @@ import 'Authentication/sign_up_screen.dart';
 import 'Authentication/splash_screen.dart';
 import 'Authentication/verify_phone_number_pin_screen.dart';
 import 'Authentication/verify_phone_screen.dart';
+import 'Home/BottomNavigationBarScreens/cards_detail_screen.dart';
 import 'Home/BottomNavigationBarScreens/change_pin_code_screen.dart';
 import 'Home/BottomNavigationBarScreens/home_bottom_navigation_bar_screen.dart';
 import 'Home/FundsTransferScreens/add_beneficiary_account_screen.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         changePinCodeScreenRoute: (context) => const ChangePinCodeScreen(),
         editProfileScreenRoute: (context) => const EditProfileScreen(),
         addNewCardScreenRoute: (context) => const AddNewCardScreen(),
+        cardDetailsScreenRoute: (context) => const CardDetailsScreen(),
         somethingWentWrongScreenRoute: (context) =>
             const SomethingWentWrongScreen(),
         paymentConfirmationScreenRoute: (context) =>

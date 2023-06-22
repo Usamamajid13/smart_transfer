@@ -57,19 +57,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           onTap: () {
                             Navigator.pushNamed(context, profileScreenRoute);
                           },
-                          child: Container(
-                            width: 30,
-                            height: 30,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                            ),
-                            child: const Icon(
-                              Icons.person,
-                              color: darkBlueColor,
-                            ),
+                          child: Image.asset(
+                            "assets/profileIcon.png",
+                            scale: 20,
+                            color: Colors.white,
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),

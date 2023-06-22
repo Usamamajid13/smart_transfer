@@ -99,9 +99,9 @@ class _FaqScreenState extends State<FaqScreen> {
                     ),
                     selected == i
                         ? Text(
-                            "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor \nsit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum \ndolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
-                            style: utils.mediumTitleSemiBoldTextStyle(
-                              color: Colors.grey,
+                            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu dolor in repreh enderitr lla cca ecat cupidatat non proiden paria.",
+                            style: utils.xmediumNormalTextStyle(
+                              color: Colors.grey[700],
                             ),
                           )
                         : Container(),

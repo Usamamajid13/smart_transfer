@@ -24,7 +24,7 @@ class SomethingWentWrongScreenState extends State<SomethingWentWrongScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 30,
+                height: 60,
               ),
               Container(
                 width: MediaQuery.of(context).size.width,

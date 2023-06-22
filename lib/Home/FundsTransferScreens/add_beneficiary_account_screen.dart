@@ -1,3 +1,4 @@
+import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_transfer/Utils/app_utils.dart';
 
@@ -12,6 +13,14 @@ class AddBeneficiaryAccountScreen extends StatefulWidget {
 class _AddBeneficiaryAccountScreenState
     extends State<AddBeneficiaryAccountScreen> {
   var utils = AppUtils();
+  String countryCode = "92";
+  String selectedReasons = '';
+  List<String> reasons = [
+    "Education",
+    "Credit Card Payment",
+    "Loan",
+    "Family Support",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +91,8 @@ class _AddBeneficiaryAccountScreenState
                     ),
                     utils.labelTextField(
                       obscureText: false,
-                      hintText: "US xx xxxxx xxxxxxxxxxxx",
-                      labelText: "IBAN NUMBER",
+                      hintText: "Enter your first name",
+                      labelText: "FIRST NAME",
                       onChange: (val) {
                         setState(() {});
                       },
@@ -93,8 +102,8 @@ class _AddBeneficiaryAccountScreenState
                     ),
                     utils.labelTextField(
                       obscureText: false,
-                      hintText: "Enter beneficiary name",
-                      labelText: "BENEFICIARY NAME",
+                      hintText: "Enter your last name",
+                      labelText: "LAST NAME",
                       onChange: (val) {
                         setState(() {});
                       },
@@ -104,18 +113,7 @@ class _AddBeneficiaryAccountScreenState
                     ),
                     utils.labelTextField(
                       obscureText: false,
-                      hintText: "Enter BIC code",
-                      labelText: "BIC CODE",
-                      onChange: (val) {
-                        setState(() {});
-                      },
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    utils.labelTextField(
-                      obscureText: false,
-                      hintText: "Enter beneficiary bank name",
+                      hintText: "Enter your bank name",
                       labelText: "BANK NAME",
                       onChange: (val) {
                         setState(() {});
@@ -126,43 +124,105 @@ class _AddBeneficiaryAccountScreenState
                     ),
                     utils.labelTextField(
                       obscureText: false,
-                      hintText: "Enter amount",
-                      labelText: "AMOUNT",
+                      hintText: "Enter your IBAN",
+                      labelText: "IBAN",
                       onChange: (val) {
                         setState(() {});
                       },
-                      prefixIcon: const Icon(
-                        Icons.attach_money_outlined,
-                        color: Colors.black,
-                        size: 20,
-                      ),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
                     utils.labelTextField(
                       obscureText: false,
-                      hintText: "Enter your comment",
-                      labelText: "COMMENT",
+                      hintText: "Enter your address",
+                      labelText: "ADDRESS",
                       onChange: (val) {
                         setState(() {});
                       },
                     ),
                     const SizedBox(
-                      height: 60,
+                      height: 10,
                     ),
-                    const Divider(
-                      color: Colors.black,
-                    ),
-                    Text(
-                      "Bank fee: 0.15USD",
-                      style: utils.smallTitleSemiBoldTextStyle(
-                        color: Colors.grey,
+                    utils.labelTextField(
+                      obscureText: false,
+                      hintText: "12345678",
+                      labelText: "PHONE NUMBER",
+                      prefixIcon: Padding(
+                        padding: EdgeInsets.only(top: 5),
+                        child: GestureDetector(
+                          onTap: () {
+                            showCountryPicker(
+                              context: context,
+                              showPhoneCode: true,
+                              onSelect: (Country country) {
+                                countryCode = country.phoneCode;
+                                setState(() {});
+                              },
+                            );
+                          },
+                          child: SizedBox(
+                            width: 30,
+                            height: 50,
+                            child: Center(
+                              child: Text(
+                                "+$countryCode",
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
+                      onChange: (val) {
+                        setState(() {});
+                      },
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
+                    Text(
+                      "REASONS FOR SENDING",
+                      style: utils.smallTitleTextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      child: DropdownButton<String>(
+                        underline: Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 1,
+                          color: Colors.grey[500],
+                        ),
+                        hint: const Text("Reasons"),
+                        isExpanded: true,
+                        menuMaxHeight: 250.0,
+                        value:
+                            selectedReasons.isNotEmpty ? selectedReasons : null,
+                        onChanged: (value) {
+                          setState(() {
+                            selectedReasons = value!;
+                          });
+                        },
+                        items: reasons.map((item) {
+                          return DropdownMenuItem(
+                            value: item,
+                            child: Text(item),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                    Spacer(),
                     utils.bigButton(
                       width: MediaQuery.of(context).size.width * 0.8,
                       onTap: () {},

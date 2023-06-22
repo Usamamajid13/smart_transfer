@@ -123,17 +123,8 @@ class _FundTransferAmountScreenState extends State<FundTransferAmountScreen> {
                               size: 20,
                             ),
                           ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Bank fee: 0.15USD",
-                              style: utils.smallTitleSemiBoldTextStyle(
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ),
                           const SizedBox(
-                            height: 10,
+                            height: 30,
                           ),
                           utils.bigButton(
                             width: MediaQuery.of(context).size.width * 0.8,

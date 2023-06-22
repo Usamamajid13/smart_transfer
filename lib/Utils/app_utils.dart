@@ -35,6 +35,22 @@ class AppUtils {
     );
   }
 
+  xmediumNormalTextStyle({color}) {
+    return TextStyle(
+      fontSize: 16,
+      color: color,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  privacyTextStyle({color}) {
+    return TextStyle(
+      fontSize: 17,
+      color: color,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
   largeHeadingTextStyle({color}) {
     return TextStyle(
       fontSize: 22,

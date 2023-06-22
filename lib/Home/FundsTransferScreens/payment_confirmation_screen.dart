@@ -77,7 +77,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                         children: [
                           Text(
                             "IBAN number",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -86,7 +86,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "US 12 124 412412512512251352521",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),
@@ -95,7 +95,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Beneficiary name",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -104,7 +104,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "NIY Com - Major LTD",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),
@@ -113,7 +113,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "BIC code",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -122,7 +122,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "124151",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),
@@ -131,7 +131,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Bank Name",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -140,7 +140,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Nexipay International Bank",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),
@@ -149,7 +149,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Amount",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -158,7 +158,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "124.00 USD",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),
@@ -167,7 +167,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Comment",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -176,7 +176,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Payment for invoice Ne9214gr2",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),
@@ -185,7 +185,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "Bank fee",
-                            style: utils.mediumTitleSemiBoldTextStyle(
+                            style: utils.mediumTitleTextStyle(
                               color: Colors.grey[600],
                             ),
                           ),
@@ -194,7 +194,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                           ),
                           Text(
                             "1.42 USD",
-                            style: utils.xmediumTitleSemiBoldTextStyle(
+                            style: utils.xmediumTitleTextStyle(
                               color: Colors.grey[800],
                             ),
                           ),

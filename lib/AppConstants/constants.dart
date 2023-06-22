@@ -31,6 +31,7 @@ const homeScreenRoute = "/homeScreenRoute";
 const changePinCodeScreenRoute = "/changePinCodeScreenRoute";
 const editProfileScreenRoute = "/editProfileScreenRoute";
 const addNewCardScreenRoute = "/addNewCardScreenRoute";
+const cardDetailsScreenRoute = "/cardDetailsScreenRoute";
 const somethingWentWrongScreenRoute = "/somethingWentWrongScreenRoute";
 const paymentConfirmationScreenRoute = "/paymentConfirmationScreenRoute";
 const addBeneficiaryAccountScreenRoute = "/addBeneficiaryAccountScreenRoute";

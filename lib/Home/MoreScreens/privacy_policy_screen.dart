@@ -57,31 +57,31 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               ),
               Text(
                 "1. Terms",
-                style: utils.largeSemiBoldTextStyle(),
+                style: utils.xmediumTitleSemiBoldTextStyle(),
               ),
               const SizedBox(
                 height: 10,
               ),
               Text(
                 "By accessing this website, you are agreeing to be bound these website Terms and Confitions of Use applicable laws and requlations and their compliance. If you disagree with any of the stated terms and conditions, you are prohibited from using or accessing this site. The materials contained in this site are secured by relevant copyright and trademark law.",
-                style: utils.largeTextStyle(
-                  color: Colors.grey,
+                style: utils.privacyTextStyle(
+                  color: Colors.grey[700],
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 50,
               ),
               Text(
                 "2. Use Licence",
-                style: utils.largeSemiBoldTextStyle(),
+                style: utils.xmediumTitleSemiBoldTextStyle(),
               ),
               const SizedBox(
                 height: 10,
               ),
               Text(
                 "By accessing this website, you are agreeing to be bound these website Terms and Confitions of Use applicable laws and requlations and their compliance. If you disagree with any of the stated terms and conditions, you are prohibited from using or accessing this site. The materials contained in this site are secured by relevant copyright and trademark law.",
-                style: utils.largeTextStyle(
-                  color: Colors.grey,
+                style: utils.privacyTextStyle(
+                  color: Colors.grey[700],
                 ),
               ),
             ],

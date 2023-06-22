@@ -31,7 +31,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
             Container(
               width: MediaQuery.of(context).size.width,
@@ -72,7 +72,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       ),
                       Text(
                         "Your loan application is approved!",
-                        style: utils.xmediumTitleSemiBoldTextStyle(),
+                        style: utils.xmediumTitleTextStyle(),
                       )
                     ],
                   ),
@@ -153,7 +153,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       ),
                       Text(
                         "The loan repayment period expires!",
-                        style: utils.xmediumTitleSemiBoldTextStyle(),
+                        style: utils.xmediumTitleTextStyle(),
                       )
                     ],
                   ),
@@ -162,7 +162,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                   ),
                   Text(
                     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    style: utils.xmediumTitleTextStyle(
+                    style: utils.mediumTitleTextStyle(
                       color: Colors.grey,
                     ),
                   ),
@@ -243,7 +243,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       ),
                       Text(
                         "Your loan application was rejected!",
-                        style: utils.xmediumTitleSemiBoldTextStyle(),
+                        style: utils.xmediumTitleTextStyle(),
                       )
                     ],
                   ),
@@ -252,7 +252,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                   ),
                   Text(
                     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-                    style: utils.xmediumTitleTextStyle(
+                    style: utils.mediumTitleTextStyle(
                       color: Colors.grey,
                     ),
                   ),
@@ -315,7 +315,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       ),
                       Text(
                         "Your piggy bank is full!",
-                        style: utils.xmediumTitleSemiBoldTextStyle(),
+                        style: utils.xmediumTitleTextStyle(),
                       )
                     ],
                   ),

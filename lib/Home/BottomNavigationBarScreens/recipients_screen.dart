@@ -86,15 +86,29 @@ class _RecipientsScreenState extends State<RecipientsScreen> {
                           const SizedBox(
                             width: 15,
                           ),
-                          Text(
-                            "Usama Majid",
-                            style: utils.mediumTitleSemiBoldTextStyle(),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Usama Majid",
+                                style: utils.largeSemiBoldTextStyle(),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "Meezan Bank ****1234",
+                                style: utils.smallTitleTextStyle(
+                                  color: Colors.grey[700],
+                                ),
+                              ),
+                            ],
                           )
                         ],
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 25,
                     ),
                   ],
                 )

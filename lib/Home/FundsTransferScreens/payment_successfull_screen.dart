@@ -24,7 +24,7 @@ class _PaymentSuccessfulScreenState extends State<PaymentSuccessfulScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 30,
+                height: 60,
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
